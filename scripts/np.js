@@ -23,12 +23,12 @@ async function fetchNowPlaying() {
           <p><strong>${title}</strong> by <em>${artist}</em></p>
         `;
     } else {
-      document.getElementById("now-playing").innerText =
-        "I'm not listening to anything right now :D";
+      document.getElementById("now-playing").innerHTML =
+        "<p><strong>I'm not listening to anything right now :D</strong></p>";
     }
   } catch {
-    document.getElementById("now-playing").innerText =
-      "Failed to fetch now playing.";
+    document.getElementById("now-playing").innerHTML =
+      "<p><strong>Failed to fetch now playing.</p><strong>";
   }
 }
 

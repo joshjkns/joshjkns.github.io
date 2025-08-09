@@ -21,7 +21,7 @@ body {
   display: flex;
   background-color: rgba(8, 8, 8, 0.95);
   width: 90%;
-  padding: 1rem;
+  padding: 0 1rem;
   max-width: 1000px;
   min-height: 100vh;
 }
@@ -37,7 +37,7 @@ a:hover {
 
 .sidebar {
   position: sticky;
-  top: 1rem;
+  top: 0;
   align-self: flex-start;
   height: fit-content;
   padding: 0;
@@ -57,7 +57,7 @@ a:hover {
   width: 200px;
   height: 200px;
   aspect-ratio: 1 / 1;
-  margin-bottom: 1rem;
+  margin: 1rem 0;
 }
 
 .name {
@@ -88,7 +88,6 @@ a:hover {
 #now-playing img {
   max-width: 200px;
   max-height: 200px;
-  margin-bottom: 0.5rem;
 }
 
 #now-playing p {
@@ -115,6 +114,7 @@ a:hover {
   flex: 1;
   box-sizing: border-box;
   min-width: 0;
+  margin: 1rem 0;
 }
 
 .section {
