@@ -1,0 +1,182 @@
+body {
+  margin: 0;
+  background-image: url("wallpaper.jpg");
+  color: #e5e5e5;
+  font-family: "JetBrainsMono Nerd Font", "Fira Code", monospace;
+  display: flex;
+  justify-content: center;
+}
+
+#life-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background: #101010;
+}
+
+.container {
+  display: flex;
+  background-color: rgba(8, 8, 8, 0.95);
+  width: 90%;
+  padding: 1rem;
+  max-width: 1000px;
+  min-height: 100vh;
+}
+
+a {
+  color: #a76eff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.sidebar {
+  position: sticky;
+  top: 1rem;
+  align-self: flex-start;
+  height: fit-content;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  max-width: 200px;
+  height: 100vh;
+}
+
+.sidebar-bottom {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.profile-pic {
+  width: 200px;
+  height: 200px;
+  aspect-ratio: 1 / 1;
+  margin-bottom: 1rem;
+}
+
+.name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.links p {
+  margin: 0.5rem 0;
+}
+
+#now-playing {
+  font-size: 0.9rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+#now-playing img {
+  max-width: 200px;
+  max-height: 200px;
+  margin-bottom: 0.5rem;
+}
+
+#now-playing p {
+  margin: 0;
+  line-height: 1.2;
+  max-width: 200px;
+}
+
+.separator-vertical {
+  width: 1px;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    #555 0,
+    #555 1em,
+    transparent 1em,
+    transparent 2em
+  );
+  margin: 0 1rem;
+  background-size: 100% 2em;
+  background-repeat: repeat-y;
+}
+
+.main-content {
+  flex: 1;
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+.section {
+  margin-bottom: 2rem;
+}
+
+.section h2 {
+  color: #a76eff;
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+}
+
+.md-separator {
+  height: 1px;
+  background-image: repeating-linear-gradient(
+    to right,
+    #555 0,
+    #555 0.6ch,
+    transparent 0.6ch,
+    transparent 1ch
+  );
+  background-size: 1ch 100%;
+  background-repeat: repeat-x;
+  margin: 0.5rem 0 1rem;
+}
+
+.section p {
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    position: static; /* Disable sticky */
+    top: auto; /* Reset top */
+    align-self: auto; /* Reset align-self */
+    max-width: 100%; /* Full width */
+    height: auto; /* Reset height */
+    padding: 1rem 0; /* Optional padding for spacing */
+  }
+
+  .sidebar-bottom {
+    flex-direction: row; /* Stack horizontally */
+    justify-content: center; /* Center items */
+    align-items: center;
+    width: 100%; /* Full width */
+    margin: 1rem 0; /* Optional margin for spacing */
+  }
+
+  .separator-vertical {
+    display: none;
+  }
+
+  .sidebar {
+    align-items: center;
+    text-align: center;
+  }
+
+  .main-content {
+    width: 100%;
+  }
+}
