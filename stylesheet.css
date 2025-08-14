@@ -27,7 +27,7 @@
 body {
   margin: 0;
   background-image: url("wallpaper.jpg");
-  color: #e5e5e5;
+  color: transparent;
   font-family: "JetBrainsMono Nerd Font", "Fira Code", monospace;
   display: flex;
   flex-direction: column;
