@@ -37,6 +37,7 @@ body {
 
 :root {
   --primary-color: #a76eff;
+  --lighter-primary-color: #c39efb;
   --border-color: #383838;
   --secondary-color: #555;
 }
@@ -180,7 +181,8 @@ a:hover {
   padding: 1rem;
 }
 
-.section h2 {
+.section h2,
+.section span {
   color: var(--primary-color);
   text-shadow: var(--primary-color) 1px 0 10px;
   margin-bottom: 0.5rem;
@@ -201,13 +203,29 @@ a:hover {
   margin: 0.5rem 0 1rem;
 }
 
+.project {
+  margin: 1rem 0;
+}
+
+.project a {
+  color: var(--primary-color);
+  text-shadow: var(--primary-color) 1px 0 10px;
+}
+
+.project span {
+  color: var(--lighter-primary-color);
+  text-shadow: var(--lighter-primary-color) 1px 0 10px;
+}
+
 .section p {
-  line-height: 1.5;
+  line-height: 1.25;
+  margin: 1rem 0;
 }
 
 .footer {
   text-align: center;
   padding: 1rem 0;
+  font-size: small;
 }
 
 .footer span {
