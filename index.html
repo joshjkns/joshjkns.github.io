@@ -13,34 +13,42 @@
     <div id="conway">
       <canvas id="life-bg"></canvas>
     </div>
+    <div class="main" id="main-logo">
+      <img class="profile-pic" src="media/gengar.gif" />
+      <div class="name">/home/josh</div>
+    </div>
     <div class="container">
-      <div class="sidebar">
-        <img
-          class="profile-pic"
-          src="https://avatars.githubusercontent.com/joshjkns"
-        />
-        <div class="name">/home/josh</div>
+      <div class="sidebar" id="sidebar">
         <div class="sidebar-bottom">
           <div class="links">
-            <div class="root">
-              <a href="#about">/about</a>
-              <a href="#projects">/projects</a>
-              <a href="#skills">/skills</a>
-            </div>
-            <div class="socials">
-              <a href="https://github.com/joshjkns">/social/github</a>
-              <a href="https://leetcode.com/u/joshjkns/">/social/leetcode</a>
-              <a href="https://last.fm/user/stickspin">/social/lastfm</a>
+            <h2>/links</h2>
+            <div class="links-text">
+              <div class="root">
+                <a href="#about">/about</a>
+                <a href="#projects">/projects</a>
+                <a href="#skills">/skills</a>
+                <a href="#blog">/blog</a>
+              </div>
+              <div class="socials">
+                <a href="https://github.com/joshjkns">/social/github</a>
+                <a href="https://leetcode.com/u/joshjkns/">/social/leetcode</a>
+                <a href="https://last.fm/user/stickspin">/social/lastfm</a>
+              </div>
             </div>
           </div>
-          <div id="now-playing"></div>
+          <div id="now-playing">
+            <h2>/now-playing</h2>
+            <div id="now-playing-content">Loading, please wait :D</div>
+          </div>
         </div>
       </div>
 
       <div class="main-content">
+        <div class="marquee">
+          <span></span>
+        </div>
         <div class="section" id="about">
           <h2>/about</h2>
-          <div class="md-separator"></div>
           <p>
             Hi, I'm Josh - a computer science student at the University of
             Bristol.
@@ -58,15 +66,16 @@
 
         <div class="section" id="projects">
           <h2>/projects</h2>
-          <div class="md-separator"></div>
           <div class="project">
             <p>
               <a href="https://github.com/BRSY1/ecosim">𓇢𓆸 ecosim</a>: A
               Java-based simulation developed during BrisHack 2025.
               <b>Won Best ML Project at BrisHack.</b>
               <a href="https://github.com/BRSY1/ecosim">Link</a>
+              <br />
+              <br />
+              <span>[Perlin Noise, MCTS, JavaFX, AI, Java]</span>
             </p>
-            <span>[Perlin Noise, MCTS, JavaFX, AI, Java]</span>
           </div>
           <div class="project">
             <p>
@@ -74,8 +83,10 @@
               A 2D Halloween-themed game featuring various mini-games.
               <b>Our first project as a team. </b
               ><a href="https://github.com/BRSY1/candycombs">Link</a>
+              <br />
+              <br />
+              <span>[PyGame, PyTorch, Python]</span>
             </p>
-            <span>[PyGame, PyTorch, Python]</span>
           </div>
           <div class="project">
             <p>
@@ -85,22 +96,23 @@
                 >My first rust project in preparation for Computer Systems A.
               </b>
               <a href="https://github.com/joshjkns/metadata">Link</a>
+              <br />
+              <br />
+              <span>[egui, id3, Symphonia, Rust]</span>
             </p>
-            <span>[egui, id3, Symphonia, Rust]</span>
           </div>
         </div>
 
         <div class="section" id="skills">
           <h2>/skills</h2>
-          <div class="md-separator"></div>
           <p>
-            <span>languages:</span> Python, Java, C, Haskell, Rust (learning)
+            <span>✎ languages</span>: Python, Java, C, Haskell, Rust (learning)
           </p>
-          <p><span>frameworks:</span> React, SvelteKit, JavaFX, egui</p>
+          <p><span>⛏ frameworks</span>: React, SvelteKit, JavaFX, egui</p>
         </div>
-        <div class="section" id="other">
-          <h2>other</h2>
-          <div class="md-separator"></div>
+        <div class="section" id="blog">
+          <h2>/blog</h2>
+          <p><a href="about:blank">Blog 1</a> - Testing</p>
         </div>
       </div>
     </div>

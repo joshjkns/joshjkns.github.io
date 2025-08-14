@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+
 /* Chrome, Edge, Safari */
 ::-webkit-scrollbar {
   width: 12px; /* Scrollbar width */
@@ -28,7 +30,8 @@ body {
   margin: 0;
   background-color: transparent;
   color: #ffffff;
-  font-family: "JetBrainsMono Nerd Font", "Fira Code", monospace;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -52,14 +55,17 @@ body {
   background: black;
 }
 
+.main {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
 .container {
   display: flex;
   width: 90%;
   padding: 0 1rem;
   max-width: 1000px;
-  border: 1px solid black;
-  border-top: none;
-  border-bottom: none;
 }
 
 a {
@@ -92,8 +98,9 @@ a:hover {
 
 .profile-pic {
   aspect-ratio: 1 / 1;
-  border: 1px solid var(--primary-color);
-  box-shadow: var(--primary-color) 1px 0 5px;
+  /* border: 2px solid var(--primary-color);
+  border-radius: 4px;
+  box-shadow: var(--primary-color) 1px 0 5px; */
   max-width: 200px;
   max-height: 200px;
 }
@@ -109,11 +116,20 @@ a:hover {
 .links {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  padding: 0.5rem;
   font-size: 0.9rem;
   background-color: black;
-  border: 2px solid var(--border-color);
+  border: 1px solid var(--border-color);
+}
+
+.links-text {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.links p {
+  margin: 0.5rem 0;
 }
 
 .root {
@@ -128,26 +144,35 @@ a:hover {
   flex-direction: column;
 }
 
-.links p {
-  margin: 0.5rem 0;
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 0.5rem;
+}
+
+.buttons img {
+  width: 100%;
 }
 
 #now-playing {
   font-size: 0.9rem;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 0.5rem;
   background-color: black;
-  border: 2px solid var(--border-color);
+  border: 1px solid var(--border-color);
 }
 
-#now-playing img {
+#now-playing-content {
+  padding: 0.5rem;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+#now-playing-content img {
   max-width: 100%;
   max-height: 100%;
 }
 
-#now-playing p {
+#now-playing-content p {
   margin: 0;
   line-height: 1.2;
   max-width: 200px;
@@ -177,11 +202,28 @@ a:hover {
 .section {
   margin-bottom: 1rem;
   background-color: black;
-  border: 2px solid var(--border-color);
-  padding: 1rem;
+  border: 1px solid var(--border-color);
 }
 
+.section p {
+  padding: 0 1rem;
+}
+
+.links h2,
 .section h2,
+#now-playing h2 {
+  background: linear-gradient(
+    90deg,
+    var(--primary-color) 0%,
+    /* very quick fade to second color */ black 90%,
+    /* transition to black */ black 100% /* stays black the rest of the way */
+  );
+  margin: 0;
+  padding: 0.4rem 0.8rem;
+  font-size: medium;
+  font-weight: 700;
+}
+
 .section span {
   color: var(--primary-color);
   text-shadow: var(--primary-color) 1px 0 10px;
@@ -260,9 +302,11 @@ a:hover {
     border: 1px solid black;
   }
 
-  .links {
+  .links-text {
     display: flex;
     flex-direction: column;
+    align-items: center;
+
     justify-content: space-evenly;
   }
 
@@ -275,12 +319,31 @@ a:hover {
     text-align: center;
   }
 
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
   .main-content {
     width: 100%;
   }
 
+  .links h2,
+  #now-playing h2 {
+    text-align: left;
+  }
+
   #now-playing {
-    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  #now-playing-content {
     width: 100%;
     gap: 1rem;
     display: flex;
@@ -299,6 +362,10 @@ a:hover {
   }
 
   .links {
+    width: 100%;
+  }
+
+  .links-text {
     background-color: black;
     flex-direction: row;
     display: flex;
@@ -326,6 +393,10 @@ a:hover {
   }
 
   #now-playing {
+    width: 100%;
+  }
+
+  #now-playing-content {
     background-color: black;
     display: flex;
     flex-direction: row;
@@ -345,6 +416,12 @@ a:hover {
   .sidebar {
     align-items: center;
     text-align: center;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 
   .main-content {

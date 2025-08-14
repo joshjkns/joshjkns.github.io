@@ -4,7 +4,7 @@ async function fetchNowPlaying() {
     const data = await res.json();
 
     if (!data.recenttracks || !data.recenttracks.track.length) {
-      document.getElementById("now-playing").innerText =
+      document.getElementById("now-playing-content").innerText =
         "No recent tracks found.";
       return;
     }
@@ -18,16 +18,16 @@ async function fetchNowPlaying() {
       const albumArt =
         track.image && track.image.length ? track.image[2]["#text"] : "";
 
-      document.getElementById("now-playing").innerHTML = `
+      document.getElementById("now-playing-content").innerHTML = `
           ${albumArt ? `<img src="${albumArt}" alt="Album Art" />` : ""}
           <p><strong>${title}</strong> by <em>${artist}</em></p>
         `;
     } else {
-      document.getElementById("now-playing").innerHTML =
+      document.getElementById("now-playing-content").innerHTML =
         "<p><strong>I'm not listening to anything right now :D</strong></p>";
     }
   } catch {
-    document.getElementById("now-playing").innerHTML =
+    document.getElementById("now-playing-content").innerHTML =
       "<p><strong>Failed to fetch now playing.</p><strong>";
   }
 }

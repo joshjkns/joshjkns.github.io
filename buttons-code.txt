@@ -1,0 +1,27 @@
+<!-- <div class="buttons">
+            <div class="button-icon">
+              <a href="https://dimden.dev/"
+                ><img src="https://dimden.dev/services/images/88x31.gif"
+              /></a>
+            </div>
+            <div class="button-icon">
+              <a href="https://melankorin.net/"
+                ><img
+                  src="https://melankorin.net/assets/img/buttons/button-1.gif"
+                  alt=""
+              /></a>
+            </div>
+            <div class="button-icon">
+              <a href="https://kat.nekoweb.org/"
+                ><img
+                  src="https://kat.nekoweb.org/buttons/button_space.png"
+                  alt="katspace"
+                  title="katspace"
+              /></a>
+            </div>
+            <div class="button-icon">
+              <a href="https://joo.sh/" target="_blank"
+                ><img src="https://files.joo.sh/img/buttons/jooshRice.gif"
+              /></a>
+            </div>
+          </div> -->
