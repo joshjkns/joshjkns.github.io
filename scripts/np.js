@@ -14,13 +14,17 @@ async function fetchNowPlaying() {
 
     if (nowPlaying) {
       const artist = track.artist["#text"];
+      const limit = 20;
       const title = track.name;
       const albumArt =
         track.image && track.image.length ? track.image[2]["#text"] : "";
 
       document.getElementById("now-playing-content").innerHTML = `
           ${albumArt ? `<img src="${albumArt}" alt="Album Art" />` : ""}
-          <p><strong>${title}</strong> by <em>${artist}</em></p>
+          <p><strong>${title.substring(
+            0,
+            limit
+          )}</strong> by <em>${artist}</em></p>
         `;
     } else {
       document.getElementById("now-playing-content").innerHTML =
