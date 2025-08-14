@@ -24,11 +24,11 @@ async function fetchNowPlaying() {
         `;
     } else {
       document.getElementById("now-playing-content").innerHTML =
-        "<p><strong>I'm not listening to anything right now :D</strong></p>";
+        "<p>I'm not listening to anything right now :D</p>";
     }
   } catch {
     document.getElementById("now-playing-content").innerHTML =
-      "<p><strong>Failed to fetch now playing.</p><strong>";
+      "<p>Failed to fetch now playing.</p>";
   }
 }
 
