@@ -10,6 +10,10 @@
   box-sizing: border-box; /* include border in element size */
 }
 
+a {
+  line-height: 1;
+}
+
 body {
   background-color: black;
   color: #ffffff;
@@ -98,6 +102,7 @@ body {
   padding: 0.4rem 0.8rem;
   font-size: medium;
   font-weight: 700;
+  border: 1px solid var(--border-color);
 }
 
 .title-sub {
@@ -106,6 +111,7 @@ body {
   padding: 0.4rem 0.8rem;
   font-size: medium;
   font-weight: 700;
+  border: 1px solid var(--border-color);
 }
 
 .pic {
