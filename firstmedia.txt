@@ -1,122 +1,36 @@
-@media (max-width: 750px) {
-  .gengar {
-    display: none;
-  }
-
-  .container {
-    flex-direction: column;
-  }
-
-  .sidebar {
-    position: static; /* Disable sticky */
-    top: auto; /* Reset top */
-    align-self: auto; /* Reset align-self */
-    max-width: 100%; /* Full width */
-    height: auto; /* Reset height */
-    padding: 1rem 0; /* Optional padding for spacing */
-  }
-
-  .sidebar-bottom {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-content: center; /* Center items */
-    width: 100%; /* Full width */
-    padding: 0.5rem 0;
-  }
-
-  .links {
-    width: 100%;
-  }
-
-  .links-content {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    justify-content: space-between;
-  }
-
-  .separator-vertical {
-    display: none;
-  }
-
-  .sidebar {
-    align-items: center;
-    text-align: center;
-  }
-
-  .inspiration-content {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-
-  .main-content {
-    width: 100%;
-  }
-
-  .links h2,
-  .now-playing h2,
-  .inspiration h2 {
-    text-align: left;
-  }
-
-  .now-playing {
-    display: flex;
-    flex-direction: column;
-  }
-
-  #now-playing-content {
-    height: 100%;
-    width: 100%;
-    gap: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-  }
-
-  #now-playing-content img {
-    max-width: 100%;
-    max-height: 100%;
-  }
-
-  .now-playing p {
-    padding: 0.5rem 0;
-  }
-
-  .home {
-    grid-column: 1 / -1;
-    width: 100%;
-  }
-}
-
-
-
-NEW
-
-
-
-@media (max-width: 1400px) {
-  .container {
-    width: 80%;
-  }
-}
-@media (max-width: 700px) {
-  .container {
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    overflow-y: auto;
-  }
-
-  .sidebar {
-    height: auto;
-  }
-
-  .main {
-    overflow: visible;
-    max-height: none;
-  }
+<div class="section">
+            <h2 class="title">about me!</h2>
+            <div class="text">
+              <p class="paragraph">Full-time student in the United Kingdom.</p>
+              <p class="paragraph">
+                Play video games quite a lot, such as osu! and fps shooters.
+              </p>
+              <p class="paragraph">
+                Currently aiming to become better at leetcode.
+              </p>
+              <p class="paragraph">
+                I love listening to music, checkout my last.fm on the left to
+                see my music taste!
+              </p>
+            </div>
+          </div>
+          <div class="section">
+            <h2 class="title">study related</h2>
+            <div class="text">
+              <p class="paragraph">
+                I'm a second-year computer science student at the
+                <a class="hyperlink" href="https://bristol.ac.uk"
+                  >University of Bristol</a
+                >.
+              </p>
+              <p class="paragraph">
+                I enjoy taking part in hackathons and coding competitions with
+                <a class="hyperlink" href="https://github.com/BRSY1">friends</a
+                >.
+              </p>
+              <p class="paragraph">
+                My main interests are AI development alongside general software
+                development.
+              </p>
+            </div>
+          </div>
