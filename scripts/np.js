@@ -24,7 +24,7 @@ async function fetchNowPlaying() {
           <p><strong>${title.substring(
             0,
             limit
-          )}</strong><br /><em>${artist}</em></p>
+          )}</strong><br /><em>${artist.substring(0, limit)}</em></p>
         `;
     } else {
       document.getElementById("now-playing-content").innerHTML =
