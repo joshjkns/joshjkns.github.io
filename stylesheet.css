@@ -90,7 +90,7 @@ a:hover {
   margin-top: 1rem;
   top: 1rem;
   align-self: flex-start;
-  max-height: 100vh;
+  height: fit-content;
   padding: 0 1rem 0 0;
   display: flex;
   flex-direction: column;
@@ -168,16 +168,16 @@ a:hover {
 
 #now-playing-content {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   padding: 0.5rem;
   text-align: center;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 #now-playing-content img {
-  max-width: 100%;
-  max-height: 100%;
+  max-width: 30%;
+  max-height: 30%;
 }
 
 #now-playing-content p {
@@ -350,17 +350,21 @@ a:hover {
 
   .sidebar-bottom {
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 1fr 1fr;
     justify-content: center; /* Center items */
     width: 100%; /* Full width */
     padding: 0.5rem 0;
   }
 
+  .links {
+    width: 100%;
+  }
+
   .links-content {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
+    height: 100%;
+    justify-content: space-between;
   }
 
   .separator-vertical {
@@ -393,26 +397,26 @@ a:hover {
 
   .now-playing {
     display: flex;
-    width: 100%;
     flex-direction: column;
   }
 
   #now-playing-content {
-    width: 100%;
     height: 100%;
+    width: 100%;
     gap: 1rem;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
   }
 
-  .now-playing p {
-    padding: 0.5rem 0;
+  #now-playing-content img {
+    max-width: 100%;
+    max-height: 100%;
   }
 
-  .inspiration {
-    grid-column: 1 / -1;
+  .now-playing p {
+    padding: 0.5rem 0;
   }
 
   .home {
@@ -421,7 +425,7 @@ a:hover {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 670px) {
   .gengar {
     display: none;
   }
@@ -432,13 +436,17 @@ a:hover {
 
   .links {
     width: 100%;
+    height: 100%;
+    grid-row: 2 / 4;
   }
 
   .links-content {
     background-color: black;
-    flex-direction: row;
+    flex-direction: column;
     display: flex;
     width: 100%;
+    height: 100%;
+    align-items: center;
     justify-content: space-evenly;
   }
 
@@ -453,8 +461,8 @@ a:hover {
   }
 
   .sidebar-bottom {
-    display: flex;
-    flex-direction: column; /* Stack horizontally */
+    display: grid;
+    grid-template-columns: 1fr 2fr;
     justify-content: center; /* Center items */
     align-items: center;
     width: 100%; /* Full width */
@@ -463,6 +471,7 @@ a:hover {
 
   .now-playing {
     width: 100%;
+    grid-column: 2;
   }
 
   #now-playing-content {
@@ -499,10 +508,12 @@ a:hover {
 
   .inspiration {
     width: 100%;
+    grid-row: 2 / 3;
+    grid-column: 2;
   }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 450px) {
   .gengar {
     display: none;
   }
