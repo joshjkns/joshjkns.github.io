@@ -24,11 +24,11 @@ async function fetchNowPlaying() {
           <p><strong>${title.substring(
             0,
             limit
-          )}</strong><br /><em>${artist.substring(0, limit)}</em></p>
+          )}</strong> by <br /><em>${artist.substring(0, limit)}</em></p>
         `;
     } else {
       document.getElementById("now-playing-content").innerHTML =
-        "<p>I'm not listening to anything right now :D</p>";
+        "<p><br />I'm not listening to anything right now :D<br /><br /></p>";
     }
   } catch {
     document.getElementById("now-playing-content").innerHTML =
