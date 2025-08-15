@@ -381,7 +381,7 @@ body {
   .container {
     padding: 0;
     margin: 1rem 0;
-    height: 90%;
+    height: 80%;
     width: 90%;
     display: grid;
     grid-template-rows: 100px 31.3px 510px 75px 50px;
@@ -405,7 +405,7 @@ body {
   .container {
     display: grid;
     width: 90%;
-    height: 90%;
+    height: 80%;
     padding: 0;
 
     grid-template-rows: 100px 31.3px 600px 50px;
