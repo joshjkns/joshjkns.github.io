@@ -24,15 +24,15 @@ async function fetchNowPlaying() {
           <p><strong>${title.substring(
             0,
             limit
-          )}</strong> by <br /><em>${artist.substring(0, limit)}</em></p>
+          )}</strong> <br />   <em>${artist.substring(0, limit)}</em></p>
         `;
     } else {
       document.getElementById("now-playing-content").innerHTML =
-        "<strong><p><br /><br /><br />I'm not listening right now D:<br /><br /><br /></p></strong>";
+        "<strong><p>I'm not listening to anything right now D:</p></strong>";
     }
   } catch {
     document.getElementById("now-playing-content").innerHTML =
-      "<strong><p><br /><br /><br />Failed to get playing song D:<br /><br /><br /></p></strong>";
+      "<strong><p>Failed to get playing song D:</p></strong>";
   }
 }
 
