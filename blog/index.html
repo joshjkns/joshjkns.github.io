@@ -1,0 +1,19 @@
+---
+layout: blog-default
+title: Blog
+permalink: /blog
+---
+
+<div class="right">
+  {% for post in site.posts %}
+  <div class="box blog">
+    <a href="{{ post.url }}">
+        <h2>{{ post.title }}</h2>
+        <p>{{ post.desc }}</p>
+        <small>{{ post.date | date: "%A %d %B, %Y" | downcase}}</small>
+      </h2>
+    </a>
+    <p>{{ post.content }}</p>
+  </div>
+  {% endfor %}
+</div>

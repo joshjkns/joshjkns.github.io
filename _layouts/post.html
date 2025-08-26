@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="media/favicon.ico" />
+
+    <title>{{ page.title }} - jkns.me</title>
+  </head>
+  <body>
+    <div class="main-content">
+      <div class="left">
+        <div class="box">
+          <a href="/blog.html"><h2>< back to blogs</h2></a>
+        </div>
+      </div>
+      <div class="right">
+        <div class="box blog">
+          <a href="{{ page.url }}">
+              <h2>{{ page.title }}</h2>
+              <p>{{ page.desc }}</p>
+              <small>{{ page.date | date: "%A %d %B, %Y" | downcase}}</small>
+            </h2>
+          </a>
+          <p>{{ page.content }}</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
