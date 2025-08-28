@@ -19,12 +19,12 @@
         </div>
         <div class="nav">
           <div class="nav-list">
-            <a href="/" class=""
+            <a href="/" class="{% if page.url == '/' %}active{% endif %}"
               >home</a
             >
             <a
               href="/projects"
-              class="active"
+              class="{% if page.url == '/projects' %}active{% endif %}"
               >projects</a
             >
             <a href="/blog">blog</a>
@@ -58,41 +58,7 @@
           </div>
         </div>
       </div>
-      <div class="right"><div class="box">
-  <h2>metadata</h2>
-  <p>
-    A simple cross-platform metadata editor made in rust, using egui, with
-    rust-id3 and symphonia for audio metadata.
-  </p>
-  <img
-    class="project-img"
-    src="https://camo.githubusercontent.com/1c0b03adc1901e4ef5caa4b189c6eff1ef2c94451ce60b6f09aeb68c0d0465f1/68747470733a2f2f692e696d6775722e636f6d2f724d44675776732e706e67"
-  />
-</div>
-<div class="box">
-  <h2>ecosim</h2>
-  <p>
-    EcoSim is a Java-based simulation developed during BrisHack 2025.
-    <br />It models the interactions between various animal species and their
-    environment, utilizing procedural terrain generation and intelligent agent
-    behavior.
-  </p>
-  <img class="project-img" src="media/ecosim.png" />
-</div>
-<div class="box">
-  <h2>candycombs</h2>
-  <p>
-    A 2D Halloween-themed game featuring various mini-games. <br />
-    Players collect candies by exploring rooms, answering trivia questions,
-    trying their luck at the roulette table, and opening chests to gain
-    power-ups.
-  </p>
-  <video
-    class="project-img"
-    src="https://github.com/user-attachments/assets/a586758a-879b-4a5c-bf36-8350998d2120"
-  ></video>
-</div>
-</div>
+      <div class="right">{{ content }}</div>
 
       <div class="footer">
         <div class="box">
