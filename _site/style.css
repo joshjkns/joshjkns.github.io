@@ -2,6 +2,16 @@
   box-sizing: border-box;
 }
 
+::selection {
+  background-color: var(--accent-purple);
+  color: white;
+}
+
+::-moz-selection {
+  background-color: var(--accent-purple);
+  color: white;
+}
+
 :root {
   --bg-darker: #202020;
   --bg-dark: #222; /* dark grey background */
@@ -204,7 +214,7 @@ body::after {
 
 #now-playing-content {
   display: flex;
-  gap: 0.5rem;
+  gap: 0.25rem;
   flex-direction: row;
   align-items: center;
   padding: 0.5rem 1rem;
@@ -362,4 +372,49 @@ body::after {
 .blog a:hover {
   text-decoration: none;
   background-color: var(--accent-purple-light);
+}
+
+.scroll-box {
+  width: 100%;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.scroll-box .box {
+  margin-bottom: 0.5rem;
+}
+
+.recent-blog-box h2,
+.recent-blog-box p {
+  background-color: var(--bg-dark);
+  text-shadow: none;
+  box-shadow: none;
+  border: none;
+}
+
+.recent-blog-box h2 {
+  color: white;
+  font-size: 32px;
+  margin: 0;
+  padding: 0.5rem 0.5rem 0 0.5rem;
+}
+
+.recent-blog-box p {
+  font-size: 16px;
+  padding: 0.25rem 0.5rem;
+}
+
+.recent-blog-date {
+  color: var(--accent-purple-light);
+}
+
+.recent-blog-box {
+  border: none;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.h-container .box {
+  flex: 1;
+  max-height: 250px;
 }

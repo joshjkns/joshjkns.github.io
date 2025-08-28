@@ -23,10 +23,40 @@ permalink: /
 <div class="h-container">
   <div class="box">
     <h2>changelog</h2>
-    <p>test</p>
+    <div class="scroll-box">
+      <div class="box">
+        <h2>added new blog post - 28/08/25</h2>
+        <p>
+          actually finds the most recent blog post and places its title, desc,
+          date and a read more button. next goal is mobile layout
+        </p>
+      </div>
+      <div class="box">
+        <h2>fixed now playing - 28/08/25</h2>
+        <p>
+          can now store cache of previous song, so it will change to a last
+          listened box instead :D
+        </p>
+      </div>
+      <div class="box">
+        <h2>jekyll! - 27/08/25</h2>
+        <p>
+          using jekyll fully for site management. was just going to use for blog
+          but the layouts feature is actually so nice
+        </p>
+      </div>
+    </div>
   </div>
   <div class="box">
+    {% assign latest_post = site.posts.first %}
     <h2>new blog post</h2>
-    <p>test</p>
+    <div class="recent-blog-box">
+      <h2>{{ latest_post.title}}</h2>
+      <p class="recent-blog-date">
+        {{ latest_post.date | date: "%A %d %B, %Y" | downcase}}
+      </p>
+      <p>{{latest_post.desc}}</p>
+    </div>
+    <a href="{{ latest_post.url }}"><p>read more</p></a>
   </div>
 </div>
