@@ -27,7 +27,11 @@
               class="{% if page.url == '/projects' %}active{% endif %}"
               >projects</a
             >
-            <a href="/blog">blog</a>
+            <a
+              href="/blog"
+              class="{% if page.url == '/blog' %}active{% endif %}"
+              >blog</a
+            >
             <a href="https://cv.jkns.me">cv</a>
           </div>
         </div>
@@ -44,21 +48,11 @@
       <div class="left">
         <div class="box">
           <h2>status</h2>
-          <p>temp</p>
+          <p>hey still fixing this</p>
         </div>
         <div class="box">
           <h2 id="now-playing-title">listening to</h2>
           <div id="now-playing-content"></div>
-        </div>
-        <div class="box">
-          <h2>add my button!</h2>
-          <div class="button-content">
-            <img src="media/button.png" />
-            <textarea readonly>
-<a href="https://jkns.me"><img src="https://jkns.me/media/button.png"></a>
-</textarea
-            >
-          </div>
         </div>
       </div>
       <div class="right">{{ content }}</div>

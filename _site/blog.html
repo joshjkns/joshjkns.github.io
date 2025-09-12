@@ -2,24 +2,60 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="media/favicon.ico" />
 
     <title>blog - jkns.me</title>
   </head>
   <body>
+    <script src="scripts/np.js"></script>
     <div class="main-content">
-      <div class="left">
+      <div class="header">
         <div class="box">
-          <a href="/"><h2>< back to site</h2></a>
+          <!-- <div class="main-img"></div> -->
+          <!-- <div class="website-name"><a href="https://jkns.me">jkns.me</a></div> -->
+          <div class="title-box">jkns.me ~/</div>
         </div>
-        <div class="box">
-          <h2>blog</h2>
-          <p>this is my riveting blog, enjoy your stay :D</p>
+        <div class="nav">
+          <div class="nav-list">
+            <a href="/" class=""
+              >home</a
+            >
+            <a
+              href="/projects"
+              class=""
+              >projects</a
+            >
+            <a
+              href="/blog"
+              class="active"
+              >blog</a
+            >
+            <a href="https://cv.jkns.me">cv</a>
+          </div>
         </div>
       </div>
-      <div class="right">
+
+      <div class="marquee box">
+        <div class="marquee-alert">
+          <span>welcome to jkns.me! / take a look around! / </span>
+          <span>welcome to jkns.me! / take a look around! / </span>
+          <span>welcome to jkns.me! / take a look around! / </span>
+        </div>
+      </div>
+
+      <div class="left">
+        <div class="box">
+          <h2>status</h2>
+          <p>hey still fixing this</p>
+        </div>
+        <div class="box">
+          <h2 id="now-playing-title">listening to</h2>
+          <div id="now-playing-content"></div>
+        </div>
+      </div>
+      <div class="right"><div class="right">
   
   <div class="box blog">
     <a href="/2025/08/26/second-blog.html">
@@ -40,7 +76,16 @@
   </div>
   
 </div>
+</div>
 
+      <div class="footer">
+        <div class="box">
+          <p>
+            built with <a href="https://jekyllrb.com/">jekyll</a> / joshjkns
+            2025 / <a href="mailto:josh@jkns.me">josh@jkns.me</a>
+          </p>
+        </div>
+      </div>
     </div>
   </body>
 </html>
