@@ -13,7 +13,7 @@ async function fetchNowPlaying() {
     const nowPlaying = track["@attr"] && track["@attr"].nowplaying === "true";
 
     const artist = track.artist["#text"];
-    const limit = 20;
+    const limit = 30;
     const title = track.name;
     const url = track.url;
     const albumArt =
